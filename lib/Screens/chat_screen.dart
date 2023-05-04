@@ -98,7 +98,9 @@ class _ChatScreenState extends State<ChatScreen> {
         child: Column(
           children: [
             Flexible(
-              child: Padding(
+              child: messages.length == 0? 
+              Center(child: Text('There is no messages yet.',style: TextStyle(fontSize: 18.sp,color: Colors.grey),),)
+              :Padding(
               padding: EdgeInsets.only(left: 12.w),
               child: ListView.builder(
                   controller: _scrollController,
